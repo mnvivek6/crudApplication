@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    </head>
+    <body>
+      <header id="header">
+        <nav>
+            <div class="container">
+                <div class="text-center">
+                   <a href="/" class="nav-brand text-dark">User Management System</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- <div class="container">
+      <div class ="box-nav d-flex-justify-between">
+           <a href="/add-user" class="border-shadow">
+              <span class="text-gradient">new user <i class="fa-solid fa-user"></i></span>
+           </a>
+      </div>
+    </div> -->
+    <div class="text-center">
+        <!-- <a href="/" class="nav-brand text-dark">Update User</a> -->
+        <h2 style="margin-top: 50px;">Update User</h2>
+        <p>use the below form to update an account</p>
+     </div>
+        <form action="/update-user" method="post">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="hidden"name="id"value="<%=user._id%>">
+      <input type="text" class="form-control" id="name" placeholder="jhon carter" name="name" value="<%=user.name%>">
+    </div>
+    <div class="form-group">
+      <label for="email">Email address</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter your email" name="email" value="<%=user.email%>">
+    </div>
+    <!-- <div class="form-group">
+      <label for="gender">Gender</label>
+      <select class="form-control" id="gender">
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+    </div> -->
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+          
+    </body>
+    </html>
+    
+    
+      
+  
